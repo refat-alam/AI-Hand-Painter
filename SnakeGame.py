@@ -113,3 +113,7 @@ while True:
     key = cv2.waitKey(1)
     if key == ord('r'):
         game.gameOver = False
+    if key == ord('q'):
+        break
+cap.release()
+cv2.destroyAllWindows()
