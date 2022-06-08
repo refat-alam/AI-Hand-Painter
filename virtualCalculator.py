@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Dec 10 21:48:53 2021
 
-@author: amine gasa
-"""
 
 import cv2
 from  cvzone.HandTrackingModule import HandDetector 
