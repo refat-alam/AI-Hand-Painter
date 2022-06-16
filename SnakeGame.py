@@ -109,11 +109,17 @@ while True:
         lmList = hands[0]['lmList']
         pointIndex = lmList[8][0:2]
         img = game.update(img, pointIndex)
-    cv2.imshow("Image", img)
+    cv2.imshow("Snake Game", img)
     key = cv2.waitKey(1)
     if key == ord('r'):
         game.gameOver = False
+    if key == ord('e'):
+        cap.release()
+        cv2.destroyWindow('Snake Game')
+        import virtualCalculator
+        break
     if key == ord('q'):
         break
 cap.release()
 cv2.destroyAllWindows()
+#cv2.destroyWindow('Snake Game')

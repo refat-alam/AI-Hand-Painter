@@ -3,6 +3,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 import random
+import subprocess
 
 class ColorRect():
     def __init__(self, x, y, w, h, color, text='', alpha = 0.5):
@@ -234,10 +235,20 @@ while True:
             cv2.rectangle(frame, (pen.x, pen.y), (pen.x +pen.w, pen.y+pen.h), (255,255,255), 2)
 
 
-    cv2.imshow('video', frame)
+    cv2.imshow('Virtual Painter', frame)
     #cv2.imshow('canvas', canvas)
     k= cv2.waitKey(1)
+    # Mannual canvas clear by 'C' key
+    if k == ord('c'):
+        clear.alpha = 0
+        canvas = np.zeros((720, 1280, 3), np.uint8)
+    if k == ord('e'):
+        cap.release()
+        cv2.destroyWindow('Virtual Painter')
+        import quiz
+        break
     if k == ord('q'):
         break
 cap.release()
 cv2.destroyAllWindows()
+#cv2.destroyWindow('Virtual Painter')

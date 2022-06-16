@@ -85,10 +85,16 @@ while True:
     cv2.rectangle(img, (150, 600), (1100, 650), (153, 204, 255), 5)
     img, _ = cvzone.putTextRect(img, f'{round((qNo / qTotal) * 100)}%', [1130, 635], 2, 2, offset=16)
 
-    cv2.imshow("Img", img)
+    cv2.imshow("quiz", img)
     #cv2.waitKey(1)
     k = cv2.waitKey(1)
+    if k == ord('e'):
+        cap.release()
+        cv2.destroyWindow('quiz')
+        import SnakeGame
+        break
     if k == ord('q'):
         break
 cap.release()
 cv2.destroyAllWindows()
+#cv2.destroyWindow('quiz')
