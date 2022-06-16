@@ -88,6 +88,7 @@ while True:
     cv2.imshow("quiz", img)
     #cv2.waitKey(1)
     k = cv2.waitKey(1)
+    # switch window
     if k == ord('e'):
         cap.release()
         cv2.destroyWindow('quiz')

@@ -96,6 +96,7 @@ while True:
     key = cv2.waitKey(1)
     if (key == ord("c")):  # to clear the display calculator
         equation = ""
+    # switch window
     if key == ord('e'):
         cv2.destroyWindow('Virtual Calculator')
         import main

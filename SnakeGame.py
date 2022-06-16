@@ -113,6 +113,7 @@ while True:
     key = cv2.waitKey(1)
     if key == ord('r'):
         game.gameOver = False
+        # switch window
     if key == ord('e'):
         cap.release()
         cv2.destroyWindow('Snake Game')

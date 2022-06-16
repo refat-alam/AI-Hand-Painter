@@ -242,6 +242,7 @@ while True:
     if k == ord('c'):
         clear.alpha = 0
         canvas = np.zeros((720, 1280, 3), np.uint8)
+        # switch window
     if k == ord('e'):
         cap.release()
         cv2.destroyWindow('Virtual Painter')
