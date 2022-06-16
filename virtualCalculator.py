@@ -42,9 +42,9 @@ cap = cv2.VideoCapture(0)
 detector = HandDetector(detectionCon=0.8, maxHands=1)
 # creating Button
 buttonListValue = [["1", "2", "3", "+"],
-                   ["4", "5", "6", "-"],
+                   ["4", "5", "6", "="],
                    ["7", "8", "9", "*"],
-                   ["0", "/", ".", "="]]
+                   ["0", "/", ".", "-"]]
 buttonList = []
 for x in range(4):
     for y in range(4):
