@@ -39,7 +39,7 @@ class ColorRect():
         return False
 
 
-#initilize the habe detector
+#initilize the hand detector
 detector = HandTracker(detectionCon=0.8)
 
 #initilize the camera 
