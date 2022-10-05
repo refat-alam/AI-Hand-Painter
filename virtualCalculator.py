@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 
 
 import cv2
@@ -105,4 +105,3 @@ while True:
         break
 cap.release()
 cv2.destroyAllWindows()
-#cv2.destroyWindow('Snake Game')
